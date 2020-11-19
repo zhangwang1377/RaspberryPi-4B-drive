@@ -1,0 +1,23 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2835";
+
+	fragment@0 {
+		target-path = "/";
+		__overlay__ {
+            my_pi_led0 {
+                compatible = "pi_4b,my_pi_led";
+                pin = <20>;
+
+            };
+
+			my_pi_led1 {
+                compatible = "pi_4b,my_pi_led";
+                pin = <21>;
+
+            };
+		};
+	};
+};
