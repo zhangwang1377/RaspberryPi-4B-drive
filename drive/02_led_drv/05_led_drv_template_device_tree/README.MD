@@ -15,7 +15,7 @@ dtc -I dts -O dtb -o pi-led-overlay.dtbo pi-led-overlay.dts
 ~~~
 * 加载设备树覆盖
 ~~~sh
-sudo dtoverlay myled.dtbo
+sudo dtoverlay pi-led-overlay.dtbo
 ~~~
 ---
 上面的方法是在运行时加载设备树覆盖，重启后无效，如果想重启后仍生效，请采用如下方法
