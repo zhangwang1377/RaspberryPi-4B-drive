@@ -1,0 +1,17 @@
+/dts-v1/;
+/plugin/;
+//GPIO_ACTIVE_HIGH = 0, GPIO_ACTIVE_LOW = 1 
+/ {
+	compatible = "brcm,bcm2835";
+
+	fragment@0 {
+		target-path = "/";
+		__overlay__ {
+            my_pi_led_key {
+                compatible = "pi_4b,my_pi_led_ley";
+                led-gpio = <&gpio 21 0>;
+				key-gpio = <&gpio 20 1>;
+            };
+		};
+	};
+};
